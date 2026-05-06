@@ -4,181 +4,105 @@
 <head>
     <title>Front-End Developers</title>
 
-   <style>
-       body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f5f6fa;
-}
+    <style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f5f6fa;
+    }
 
-/* Flexible Page Layout */
+    /* Sticky footer layout */
+    body.flex-page {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
 
-.page-content {
-    flex: 1;
-}
+    .page-content {
+        flex: 1;
+    }
 
-/* For pages with sticky footer */
+    /* Headings */
+    h1 {
+        text-align: center;
+        color: #1f2a44;
+        margin-top: 30px;
+    }
 
-body.flex-page {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
+    h2 {
+        color: #1f2a44;
+    }
 
-/* Headings */
+    h2, p {
+        margin: 10px;
+    }
 
-h1 {
-    text-align: center;
-    color: #1f2a44;
-    margin-top: 30px;
-}
+    /* Navigation */
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #1f2a44;
+    }
 
-h2 {
-    color: #1f2a44;
-}
+    ul li {
+        float: left;
+    }
 
-h2, p {
-    margin: 10px;
-}
+    ul li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 16px 18px;
+        text-decoration: none;
+        font-weight: bold;
+    }
 
-/* Navigation */
+    ul li a:hover {
+        background-color: #4a6fa5;
+    }
 
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #1f2a44;
-}
+    /* ✅ WIDER + CENTRED BOX */
+    .container {
+        width: 95%;
+        max-width: 1100px;
+        margin: 40px auto;
+        padding: 25px;
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
 
-ul li {
-    float: left;
-}
+    /* Footer */
+    .footer {
+        background-color: #1f2a44;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        padding: 25px;
+        margin-top: auto;
+    }
 
-ul li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 16px 18px;
-    text-decoration: none;
-    font-weight: bold;
-}
+    .footer-column {
+        width: 33%;
+    }
 
-ul li a:hover {
-    background-color: #4a6fa5;
-}
+    .footer-column h3 {
+        margin-top: 0;
+    }
 
-/* Main Containers */
-
-.container {
-    display: flex;
-    width: 90%;
-    margin: 30px auto;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.box {
-    width: 48%;
-    padding: 25px;
-    box-sizing: border-box;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
-.image-box,
-.center-box {
-    width: 70%;
-    margin: 40px auto;
-    padding: 25px;
-    background-color: white;
-    text-align: center;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
-/* Staff Section */
-
-.staff-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    width: 90%;
-    margin: 40px auto;
-}
-
-.staff-box {
-    background-color: white;
-    padding: 25px;
-    text-align: center;
-    border-radius: 8px;
-    transition: 0.3s;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
-.staff-link {
-    text-decoration: none;
-    color: black;
-}
-
-.staff-link:hover .staff-box {
-    transform: translateY(-5px);
-}
-
-/* Forms */
-
-input,
-textarea {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    margin-bottom: 15px;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-}
-
-button {
-    background-color: #1f2a44;
-    color: white;
-    border: none;
-    padding: 12px 20px;
-    cursor: pointer;
-    border-radius: 4px;
-}
-
-button:hover {
-    background-color: #4a6fa5;
-}
-
-/* Footer */
-
-.footer {
-    background-color: #1f2a44;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    padding: 25px;
-    margin-top: auto;
-}
-
-.footer-column {
-    width: 33%;
-}
-
-.footer-column h3 {
-    margin-top: 0;
-}
-
-.footer-column p {
-    font-size: 14px;
-}
-   </style>
+    .footer-column p {
+        font-size: 14px;
+    }
+    </style>
 
 </head>
 
-<body>
+<body class="flex-page">
+
+<div class="page-content">
 
     <ul>
         <li><a href="index.html">Home</a></li>
@@ -200,40 +124,45 @@ button:hover {
 
         <h2>Skills</h2>
         <p>
-            • HTML
-            • CSS
-            • JavaScript
+            • HTML<br>
+            • CSS<br>
+            • JavaScript<br>
             • Responsive Design
         </p>
 
         <h2>Responsibilities</h2>
         <p>
-            • Create layouts
-            • Improve user experience
+            • Create layouts<br>
+            • Improve user experience<br>
             • Test website design
         </p>
 
     </div>
-    .footer {
-    background-color: #1f2a44;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    padding: 25px;
-    margin-top:40px;
-    }
 
-    .footer-column {
-    width: 33%;
-    }
+</div>
 
-    .footer-column h3 {
-    margin-top: 0;
-    }
+<!-- Footer -->
+<footer class="footer">
 
-    .footer-column p {
-    font-size: 14px;
-    }
+    <div class="footer-column">
+        <h3>About</h3>
+        <p>Hot Beans Web is a company focused on developing websites and training new developers.</p>
+    </div>
+
+    <div class="footer-column">
+        <h3>Links</h3>
+        <p>Home</p>
+        <p>Jobs</p>
+        <p>Apply</p>
+    </div>
+
+    <div class="footer-column">
+        <h3>Contact</h3>
+        <p>Email: careers@hotbeansweb.com</p>
+        <p>Phone: 01234 567890</p>
+    </div>
+
+</footer>
 
 </body>
 
