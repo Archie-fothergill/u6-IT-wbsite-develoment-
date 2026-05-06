@@ -2,26 +2,25 @@
 <html>
 <head>
 <title>Courses</title>
+
 <style>
-  body {
+body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
     background-color: #f5f6fa;
 }
 
-/* Flexible Page Layout */
-
-.page-content {
-    flex: 1;
-}
-
-/* For pages with sticky footer */
-
+/* Flex layout for sticky footer */
 body.flex-page {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+}
+
+/* Page content grows to push footer down */
+.page-content {
+    flex: 1;
 }
 
 /* Headings */
@@ -67,7 +66,7 @@ ul li a:hover {
     background-color: #4a6fa5;
 }
 
-/* Main Containers */
+/* Containers */
 
 .container {
     display: flex;
@@ -86,8 +85,7 @@ ul li a:hover {
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
-.image-box,
-.center-box {
+.image-box {
     width: 70%;
     margin: 40px auto;
     padding: 25px;
@@ -95,59 +93,6 @@ ul li a:hover {
     text-align: center;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
-/* Staff Section */
-
-.staff-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    width: 90%;
-    margin: 40px auto;
-}
-
-.staff-box {
-    background-color: white;
-    padding: 25px;
-    text-align: center;
-    border-radius: 8px;
-    transition: 0.3s;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
-.staff-link {
-    text-decoration: none;
-    color: black;
-}
-
-.staff-link:hover .staff-box {
-    transform: translateY(-5px);
-}
-
-/* Forms */
-
-input,
-textarea {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    margin-bottom: 15px;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-}
-
-button {
-    background-color: #1f2a44;
-    color: white;
-    border: none;
-    padding: 12px 20px;
-    cursor: pointer;
-    border-radius: 4px;
-}
-
-button:hover {
-    background-color: #4a6fa5;
 }
 
 /* Footer */
@@ -173,8 +118,14 @@ button:hover {
     font-size: 14px;
 }
 </style>
+
 </head>
-<body>
+
+<!-- ✅ FIX APPLIED HERE -->
+<body class="flex-page">
+
+<!-- ✅ WRAPPER START -->
+<div class="page-content">
 
 <!-- Navigation -->
 <ul>
@@ -191,7 +142,7 @@ button:hover {
 <!-- Two boxes -->
 <div class="container">
 
-<div class="box left">
+<div class="box">
 <h2>Recommended Courses</h2>
 <p>
 Hot Beans Web recommends completing a recognised web development course before applying 
@@ -203,7 +154,7 @@ Courses typically include HTML, CSS, JavaScript, responsive design, and real-wor
 </p>
 </div>
 
-<div class="box right">
+<div class="box">
 <h2>Qualifications We Accept</h2>
 <p>
 We welcome applicants with qualifications such as:
@@ -221,7 +172,6 @@ We welcome applicants with qualifications such as:
 </div>
 
 <!-- Image Box -->
-
 <div class="image-box">
 <h2>Start Your Web Development Journey</h2>
 
@@ -232,11 +182,11 @@ Completing a course gives you the knowledge and confidence to begin your career 
 <p>
 Browse available courses and apply once you are ready to join Hot Beans Web.
 </p>
-
 </div>
 
-<!-- Footer -->
+</div> <!-- ✅ WRAPPER END -->
 
+<!-- Footer -->
 <footer class="footer">
 
 <div class="footer-column">
