@@ -5,29 +5,26 @@
 <title>Management</title>
 
 <style>
-  body {
+body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
     background-color: #f5f6fa;
 }
 
-/* Flexible Page Layout */
-
-.page-content {
-    flex: 1;
-}
-
-/* For pages with sticky footer */
-
+/* Sticky footer layout */
 body.flex-page {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
 
-/* Headings */
+/* Page content wrapper */
+.page-content {
+    flex: 1;
+}
 
+/* Headings */
 h1 {
     text-align: center;
     color: #1f2a44;
@@ -43,7 +40,6 @@ h2, p {
 }
 
 /* Navigation */
-
 ul {
     list-style-type: none;
     margin: 0;
@@ -69,91 +65,18 @@ ul li a:hover {
     background-color: #4a6fa5;
 }
 
-/* Main Containers */
-
+/* ✅ WIDER + CENTRED CONTAINER */
 .container {
-    display: flex;
-    width: 90%;
-    margin: 30px auto;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.box {
-    width: 48%;
-    padding: 25px;
-    box-sizing: border-box;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
-.image-box,
-.center-box {
-    width: 70%;
+    width: 95%;
+    max-width: 1100px;
     margin: 40px auto;
-    padding: 25px;
-    background-color: white;
-    text-align: center;
+    padding: 20px;
+    background: white;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
-/* Staff Section */
-
-.staff-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    width: 90%;
-    margin: 40px auto;
-}
-
-.staff-box {
-    background-color: white;
-    padding: 25px;
-    text-align: center;
-    border-radius: 8px;
-    transition: 0.3s;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
-.staff-link {
-    text-decoration: none;
-    color: black;
-}
-
-.staff-link:hover .staff-box {
-    transform: translateY(-5px);
-}
-
-/* Forms */
-
-input,
-textarea {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    margin-bottom: 15px;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-}
-
-button {
-    background-color: #1f2a44;
-    color: white;
-    border: none;
-    padding: 12px 20px;
-    cursor: pointer;
-    border-radius: 4px;
-}
-
-button:hover {
-    background-color: #4a6fa5;
 }
 
 /* Footer */
-
 .footer {
     background-color: #1f2a44;
     color: white;
@@ -178,8 +101,11 @@ button:hover {
 
 </head>
 
-<body>
+<body class="flex-page">
 
+<div class="page-content">
+
+<!-- Navigation -->
 <ul>
 <li><a href="index.html">Home</a></li>
 <li><a href="courses.html">Courses</a></li>
@@ -191,6 +117,7 @@ button:hover {
 
 <h1>Management Team</h1>
 
+<!-- ✅ NOW FULL WIDTH CENTRED BOX -->
 <div class="container">
 
 <h2>Role</h2>
@@ -198,12 +125,38 @@ button:hover {
 
 <h2>Responsibilities</h2>
 <p>
-• Project planning  
-• Team leadership  
-• Business decisions  
+• Project planning<br>
+• Team leadership<br>
+• Business decisions
 </p>
 
 </div>
 
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+
+<div class="footer-column">
+<h3>About</h3>
+<p>Hot Beans Web is a company focused on developing websites and training new developers.</p>
+</div>
+
+<div class="footer-column">
+<h3>Links</h3>
+<p>Home</p>
+<p>Jobs</p>
+<p>Apply</p>
+</div>
+
+<div class="footer-column">
+<h3>Contact</h3>
+<p>Email: careers@hotbeansweb.com</p>
+<p>Phone: 01234 567890</p>
+</div>
+
+</footer>
+
 </body>
 </html>
+
